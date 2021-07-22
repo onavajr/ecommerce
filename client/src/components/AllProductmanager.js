@@ -51,7 +51,7 @@ const AllProductmanager = (props) => {
                 <Link to = {'/productmanager/new/'}>Sell your product here!</Link>
             </div>
             <div className="product">
-                <h2>This items are ready to sell</h2>
+                <h2>My Store Products</h2>
                     <br/>
                     <table>
                         <thead>
@@ -81,6 +81,7 @@ const AllProductmanager = (props) => {
                             }
                         </tbody>
                     </table>
+                    <button><Link to = {"/productmanager/shop"}>Shop Page</Link></button>
             </div>
             <br />
             <button onClick={logout}>Logout</button>
