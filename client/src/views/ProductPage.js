@@ -51,7 +51,7 @@ const ProductPage = (props) => {
                 <Link to = {'/productmanager/new/'}>Sell your product here!</Link>
             </div>
             <div className="product">
-                <h2>This items are ready to sell</h2>
+                <h2>My Products</h2>
                     <br/>
                     <table>
                         <thead>
@@ -75,7 +75,7 @@ const ProductPage = (props) => {
                                             { product.producttype }
                                         </td>
                                         <td>
-                                            <img className="imgBio" src={product.productimage}/>
+                                            <img className="imgproduct" src={product.productimage}/>
                                         </td>
                                         <td> 
 

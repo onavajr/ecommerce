@@ -22,7 +22,7 @@ const DetailProductmanager = (props) => {
         axios.delete('http://localhost:8000/api/productmanager/' + id)
             .then((res) =>{
                 console.log(res.data);
-                navigate('/productmanager');
+                navigate('/thankyou');
             })
             .catch((err) =>{
                 console.log(err);
@@ -36,9 +36,9 @@ const DetailProductmanager = (props) => {
                 <Link to = {'/productmanager/'}>Back to Home</Link>
             </div>
             <div className="detailHeader">
-                    <h2 className="editPage">Details about: {product.productname}</h2>
+                    <h2 className="editPage">Product Detail: {product.productname}</h2>
                     <div>
-                    <button className="deleteButton" onClick={ deleteProduct }><AiOutlineHome /> BUY {product.productname}</button>
+                    
                     </div>
                     
                 </div>
@@ -63,6 +63,21 @@ const DetailProductmanager = (props) => {
                 <br />
             
             </div>
+            <div>
+                <h2>Quick Check Out</h2>
+                <hr />
+                <label>Credit Card: </label>
+                <input  placeholder="Enter Card Number"></input><br />
+                <label>Card Security: </label>
+                <input placeholder="enter card security"></input><br />
+                <label>Shipping and Billing Address: </label><br />
+                <textarea placeholder="Enter your address"></textarea>
+            </div>
+            <br/>
+            <button onClick={ deleteProduct }><AiOutlineHome /> BUY {product.productname}</button>
+            
+            <br/>
+            <br/>
         </div>
         
 

@@ -7,6 +7,7 @@ import EditProductmanager from './components/EditProductmanager';
 import ProductHeader from './components/ProductHeader';
 import LoginRegistration from './views/LoginRegistration';
 import ProductPage from './views/ProductPage';
+import ThankYou from './views/ThankYou';
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <EditProductmanager path="/productmanager/:id/edit"/>
         <LoginRegistration path="/productmanager/login" />
         <ProductPage path="/productmanager/shop" />
+        <ThankYou path="/thankyou/" />
       </Router>
 
     </div>
