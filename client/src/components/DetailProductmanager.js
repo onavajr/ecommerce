@@ -1,7 +1,6 @@
 import React, {useEffect, useState } from 'react'
 import axios from 'axios';
 import {Link, navigate} from '@reach/router';
-import { AiOutlineHome } from 'react-icons/ai';
 import { IoStorefrontSharp } from 'react-icons/io5';
 
 const DetailProductmanager = (props) => {
@@ -37,10 +36,6 @@ const DetailProductmanager = (props) => {
             </div>
             <div className="detailHeader">
                     <h2 className="editPage">Product Detail: {product.productname}</h2>
-                    <div>
-                    
-                    </div>
-                    
                 </div>
             <div className="productPage">
                 <div className="productDetails">
@@ -54,30 +49,24 @@ const DetailProductmanager = (props) => {
                     <div className="productDescription">
                         <h4>Description:</h4>
                         <p>{product.productdescription}</p>
-                        
                         </div>
                     
                 </div>
                 <img src={product.productimage} alt={product.name} className="imgproduct"/>
-                <br />
-                <br />
             
             </div>
-            <div>
+            <div className="checkout">
                 <h2>Quick Check Out</h2>
                 <hr />
-                <label>Credit Card: </label>
-                <input  placeholder="Enter Card Number"></input><br />
-                <label>Card Security: </label>
-                <input placeholder="enter card security"></input><br />
+                <label>Credit Card: </label><br />
+                <input  className="textBox" placeholder="Enter card number"></input><br />
+                <label>Card Security: </label><br />
+                <input  className="textBox" placeholder="Enter card security"></input><br />
                 <label>Shipping and Billing Address: </label><br />
                 <textarea placeholder="Enter your address"></textarea>
+                <button onClick={ deleteProduct }>BUY {product.productname}</button>
             </div>
-            <br/>
-            <button onClick={ deleteProduct }><AiOutlineHome /> BUY {product.productname}</button>
-            
-            <br/>
-            <br/>
+            <br />
         </div>
         
 

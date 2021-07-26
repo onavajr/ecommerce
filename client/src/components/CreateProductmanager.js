@@ -52,7 +52,7 @@ const CreateProductManager = (props) => {
     return (
         <div>
             <div className="listHeader">
-                <h1><IoStorefrontSharp />Product Manager</h1>
+                <h1><IoStorefrontSharp />GGshoppers</h1>
                 <Link to = {'/productmanager/'}>Back to Product list</Link>
             </div>
             <div className="createForm">

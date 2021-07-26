@@ -2,6 +2,7 @@ import React, {useEffect, useState } from 'react'
 import axios from 'axios';
 import {Link, navigate} from '@reach/router';
 import { IoStorefrontSharp,  } from 'react-icons/io5';
+import { FcSearch } from "react-icons/fc";
 
 const ProductPage = (props) => {
     const [ allProducts, setAllProducts] = useState([]);
@@ -47,13 +48,38 @@ const ProductPage = (props) => {
     return (
         <div >
             <div className="listHeader">
-                <h1><IoStorefrontSharp />Product Manager</h1>
-                <Link to = {'/productmanager/new/'}>Sell your product here!</Link>
+                <h1><IoStorefrontSharp />GGshoppers</h1>
+                <div className="listHeader">
+                    <div>
+                        <Link to = {'/productmanager/new/'} className="header-menu">| Sell Item </Link>|
+                        <Link to = {'/productmanager/'} className="header-menu"> Inventory </Link> | 
+                        <Link to = {'/productmanager/login/'} className="header-menu" onClick={logout}> Logout </Link>|
+                    </div>
+                </div>
             </div>
-            <div className="product">
-                <h2>My Products</h2>
+            
+            <div className="searchElement">
+            <FcSearch/> <input type="search" className="searchBox" placeholder="Search Item..."></input> <button>Search</button>
+            </div>
+           
+            
+            
+            <div className="shopPage">
+
+                <h2>Buy now and get a free shipping</h2>
                     <br/>
-                    <table>
+                    <div>
+                        {
+                            allProducts.map((product, index) => (
+                                <div key={index}>
+                                    <div>{product.productname}</div>
+                                    <div>{ product.producttype }</div>
+                                    <img className="imgproduct" src={product.productimage}/>
+                                </div>
+                            ))
+                        }
+                    </div>
+                    {/* <table>
                         <thead>
                             <tr>
                                 <th>Product Name</th>
@@ -68,30 +94,29 @@ const ProductPage = (props) => {
                                 allProducts.map(( product, index) =>(
                                     <tr key={ index }>
                                         
-                                        <td>
+                                        <td className="td">
                                             { product.productname }
                                         </td>
-                                        <td>
+                                        <td className="td">
                                             { product.producttype }
                                         </td>
-                                        <td>
+                                        <td className="td">
                                             <img className="imgproduct" src={product.productimage}/>
                                         </td>
-                                        <td> 
-
+                                        <td className="td"> 
+                                            <Link to = {"/productmanager/" + product._id}>Details</Link> <br/><br/>
+                                            <Link to = {"/productmanager/" + product._id}><button>Buy Now</button></Link> <br/><br/>
                                             
-                                            <Link to = {"/productmanager/" + product._id}>Details</Link> | 
-                                            <Link to = {"/productmanager/"+ product._id + '/edit'}> Edit</Link> | 
                                             <button onClick={() => deleteProduct(product._id)}>Delete</button>
                                         </td>
                                     </tr>
                                 ))
                             }
                         </tbody>
-                    </table>
+                    </table> */}
             </div>
             <br />
-            <button onClick={logout}>Logout</button>
+            {/* <button onClick={logout}>Logout</button> */}
         </div>
     )
 }

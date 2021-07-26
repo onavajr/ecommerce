@@ -9,7 +9,6 @@ import LoginRegistration from './views/LoginRegistration';
 import ProductPage from './views/ProductPage';
 import ThankYou from './views/ThankYou';
 
-
 function App() {
   return (
     <div className="App">

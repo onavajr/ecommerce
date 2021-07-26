@@ -42,7 +42,7 @@ const ProductForm   = (props) => {
     }
 
     return (
-        <div>
+        <div className="shopPage">
             <form onSubmit={submitHandler}>
                 <div  className="productForm">
                     <div  className="formInput">

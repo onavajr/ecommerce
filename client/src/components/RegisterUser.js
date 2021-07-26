@@ -60,66 +60,65 @@ const RegisterUser = props => {
           : null
       }
       <form onSubmit={register}>
-        <div>
-          <label>Username </label>
+        <div className="login">
+          <label>Username: </label>
           {
             errs.username ? 
               <span className="error-text">{ errs.username.message }</span>
               : null
-          }
+          }<br />
           <input
+            className="textBox"
             type="text"
             name="username"
             value={user.username}
             onChange={(e) => handleChange(e)}
-          />
-        </div>
-        <div>
-          <label>Email </label>
+          /><br />
+        
+          <label>Email: </label>
           {
             errs.email? 
               <span className="error-text">{ errs.email.message }</span>
               : null
-          }
+          }<br />
           <input
+            className="textBox"
             type="email"
             name="email"
             value={user.email}
             onChange={ handleChange }
-          />
-        </div>
-        <div>
-          <label>Password </label>
+          /><br />
+          <label>Password: </label>
           {
             errs.password ? 
               <span className="error-text">{ errs.password.message }</span>
               : null
-          }
+          }<br />
           <input
+            className="textBox"
             type="password"
             name="password"
             value={user.password}
             onChange={ handleChange }
-          />
-        </div>
-        <div>
-          <label>Confirm Password </label>
+          /><br />
+          <label>Confirm Password: </label>
           {
             errs.confirmPassword? 
               <span className="error-text">{ errs.confirmPassword.message }</span>
               : null
-          }
+          }<br />
           <input
+            className="textBox"
             type="password"
             name="confirmPassword"
             value={user.confirmPassword}
             onChange={ handleChange }
-          />
-        </div>
-        <div className="center">
-          <button 
-            type="submit"
-          >Register Me</button>
+          /><br />
+          <div className="center">
+            <button 
+              type="submit"
+            >Sign Up</button>
+          </div>
         </div>
       </form>
     </div>

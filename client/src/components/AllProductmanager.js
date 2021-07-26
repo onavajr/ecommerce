@@ -47,8 +47,13 @@ const AllProductmanager = (props) => {
     return (
         <div >
             <div className="listHeader">
-                <h1><IoStorefrontSharp />Product Manager</h1>
-                <Link to = {'/productmanager/new/'}>Sell your product here!</Link>
+                <h1><IoStorefrontSharp />GGshoppers</h1>
+                <div>
+                    <Link to = {'/productmanager/shop/'} className="header-menu">
+                        | Shop </Link>|
+                    <Link to = {'/productmanager/new/'} className="header-menu"> Sell Item </Link> |
+                    <Link to = {'/productmanager/login/'} className="header-menu"> Logout </Link>|
+                </div>
             </div>
             <div className="product">
                 <h2>My Store Products</h2>
@@ -84,7 +89,7 @@ const AllProductmanager = (props) => {
                     <button><Link to = {"/productmanager/shop"}>Shop Page</Link></button>
             </div>
             <br />
-            <button onClick={logout}>Logout</button>
+            {/* <button onClick={logout}>Logout</button> */}
         </div>
     )
 }

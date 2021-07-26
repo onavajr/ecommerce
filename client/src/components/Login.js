@@ -20,7 +20,7 @@ const Login = () => {
         console.log(res.cookie);
         console.log(res);
         console.log(res.data, 'is res data!');
-        navigate("/productmanager");
+        navigate("/productmanager/shop/");
       })
       .catch(err => {
         console.log(err.response);
@@ -33,29 +33,30 @@ const Login = () => {
       <h2>Login</h2>
       <p className="error-text">{errorMessage ? errorMessage : ""}</p>
       <form onSubmit={login}>
-        <div>
-          <label>Email </label>
+        <div className="login">
+          <label>Email: </label>< br />
           <input
+            className="textBox"
             type="text"
             name="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-          />
-        </div>
-        <div>
-          <label>Password </label>
+          />< br />
+          <label>Password: </label>< br />
           <input 
+            className="textBox"
             type="password"
             name="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-        </div>
-        <div className="center">
-          <button 
-            type="submit"
-          >Sign In</button>
-        </div>
+        
+          <div className="center">
+            <button 
+              type="submit"
+            >Sign In</button>
+          </div>
+          </div>
       </form>
     </div>
   );

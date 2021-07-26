@@ -25,7 +25,7 @@ module.exports = {
 		User.findOne({ email: req.body.email })
 			.then((user) => {
 				if(user === null) {
-					res.status(400).json({ message: "Invalid Login Attempt - 1" })
+					res.status(400).json({ message: "Email and Password did not match" })
 				} else {
 					bcrypt.compare(req.body.password, user.password)
 						.then((isPasswordValid) => {
@@ -49,16 +49,16 @@ module.exports = {
 										}
 									})
 							} else {
-								res.status(400).json({ message: "Invalid Login Attempt - 2" })
+								res.status(400).json({ message: "Login Error Check password and email" })
 							}
 						})
 						.catch((err) => {
-							res.status(400).json({ message: "Invalid Login Attempt - 3" })
+							res.status(400).json({ message: "Login Error Check password and email" })
 						})
 				}
 			})
 			.catch((err) => {
-				res.status(400).json({ message: "Invalid Login Attempt - 4" })
+				res.status(400).json({ message: "Login Error Check password and email" })
 			})
 	},
 

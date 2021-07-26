@@ -1,7 +1,65 @@
 
-/* * {
-  outline: 1px solid red;
-} */
+* {
+  /* outline: 1px solid red; */
+  
+}
+
+.searchElement {
+  width: auto;
+  text-align: center;
+}
+.searchBox{
+  width: 400px;
+}
+
+.search{
+  display: inline-block;
+}
+
+/*********** start login ************/
+.login{
+  padding: 20px;
+}
+.header-menu{
+  text-decoration: none;
+  color: black;
+  font-size: medium;
+}
+.header-menu:hover{
+  background: #2196f3;
+  color: white;
+  font-style: italic;
+  border-radius: 3px;
+  font-size:large;
+  padding: 2px;
+}
+
+.signIn{
+  margin: auto;
+  width: 400px;
+}
+/*********** end login ************/
+
+/*********** table data **********/
+.td {
+  text-align: center;
+}
+
+textarea {
+  height: 40px;
+  width: 300px;
+}
+/*********** end data **********/
+
+.shopPage {
+  width: 600px;
+  margin: auto;
+}
+
+.checkout {
+  margin: auto;
+  width: 400px;
+}
 
 .frontPage{
   text-align: center;
@@ -9,7 +67,7 @@
 }
 
 small{
-  color: red;
+  font-weight: 300;
 }
 
 .detailHeader {
@@ -24,7 +82,7 @@ small{
   width: 140px;
 }
 .textBox{
-  width: 800px;
+  width: 300px;
 }
 
 .addButton, .editButton {
@@ -144,7 +202,7 @@ table, th, td {
 
 .App {
 margin: auto;
-width: 500px;
+width: 800px;
 }
 
 .App-logo {

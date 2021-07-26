@@ -8,12 +8,11 @@ const ProductHeader = () => {
 
         <div className="frontPage">
             <h4>Welcome to!!</h4>
-            <h1><IoStorefrontSharp />Product Manager</h1>
-            <h4>Here at product manager, we give you a unique, and isotic products<br/>
-                with different a type of Items</h4>
-            <img className="product cover" src="http://www.teamworld.com/twc/images/main_template/promotional_products-collage.jpg" />
+            <h1><IoStorefrontSharp />GGshoppers</h1>
+            <h2>Shop, Save, Enjoy</h2>
+            <p>Buy now for and get free shipping</p>
+            <img className="product cover" src="http://www.teamworld.com/twc/images/main_template/promotional_products-collage.jpg" /><br></br>
             <Link to = {'/productmanager/login'}>Login to see all products</Link><br></br>
-            <small className="small">Warning! some products are not suitable for young audiences.</small>
         </div>
     )
 }
