@@ -68,7 +68,7 @@ const ProductPage = (props) => {
 
                 <h2>Buy now and get a free shipping</h2>
                     <br/>
-                    <div>
+                    <div className="shop">
                         {
                             allProducts.map((product, index) => (
                                 <div key={index}>

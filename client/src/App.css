@@ -1,7 +1,11 @@
 
 * {
-  /* outline: 1px solid red; */
-  
+  outline: 1px solid red;
+}
+
+.shop {
+  display: inline-block;
+  width: 500px;
 }
 
 .searchElement {
