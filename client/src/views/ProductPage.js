@@ -79,7 +79,7 @@ const ProductPage = (props) => {
                             ))
                         }
                     </div>
-                    {/* <table>
+                    <table>
                         <thead>
                             <tr>
                                 <th>Product Name</th>
@@ -113,7 +113,7 @@ const ProductPage = (props) => {
                                 ))
                             }
                         </tbody>
-                    </table> */}
+                    </table>
             </div>
             <br />
             {/* <button onClick={logout}>Logout</button> */}
