@@ -27,7 +27,7 @@ require('./config/productmanager.config');
 
 require('./routes/productmanager.routes')(app);
 
-require('./routes/user.routes')(app);
+require('../user.routes')(app);
 
 app.listen(process.env.MY_PORT, function () {
   return console.log("Listening on port: ".concat(process.env.MY_PORT));
